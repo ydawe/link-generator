@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Link Generator</title>
+</head>
+
+   
+
+<input type="text" id="search" placeholder="Type in the parameters for links">
+
+
+<button onclick="search()">Search</button>
+<div id="display"></div>
+<script>
+    function search(){
+       
+        var link = 'https://www.google.lv/search?q=HERE&gl=lv&hl=lv&gws_rd=cr&pws=0&start=10' ;
+
+        var search = document.getElementById('search').value;
+        search = search.replace(' ', '+');
+        link = link.replace('HERE', search);
+        
+        for (var i = 0; i < 11; i++) {
+            let newLink = link.replace('10', +i*10);
+            document.getElementById('display').innerHTML += `<a href="${newLink}">${newLink}</a><br>`;
+
+        }
+    }
+</script>
+ 
+
+
+    
+</script>
+    
+</body>
+
+</html>
