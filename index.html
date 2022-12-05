@@ -53,6 +53,9 @@
 <div id="display"></div>
 <script>
     function search(){
+        
+        document.getElementById("display").innerHTML = "";
+        
         var country = document.getElementById('country-select').value;
         if(country == 1){
             var link = 'https://www.google.lv/search?q=HERE&gl=lv&hl=lv&gws_rd=cr&pws=0&start=10' ;
