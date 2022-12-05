@@ -11,14 +11,118 @@
    
 
 <input type="text" id="search" placeholder="Type in the parameters for links">
+<select name="countries" id="country-select">
+    <option value="1">Lativa</option>
+    <option value="2">Lithuania</option>
+    <option value="3">Estonia</option>
+    <option value="4">Finland</option>
+    <option value="5">Sweden</option>
+    <option value="6">Norway</option>
+    <option value="7">Denmark</option>
+    <option value="8">Germany</option>
+    <option value="9">Austria</option>
+    <option value="10">Switzerland</option>
+    <option value="11">Belgium</option>
+    <option value="12">Netherlands</option>
+    <option value="13">Russia</option>
+    <option value="14">Poland</option>
+    <option value="15">Czech Republic</option>
+    <option value="16">Slovakia</option>
+    <option value="17">Hungary</option>
+    <option value="18">Romania</option>
+    <option value="19">Bulgaria</option>
+    <option value="20">Greece</option>
+    <option value="21">Italy</option>
+    <option value="22">Spain</option>
+    <option value="23">Portugal</option>
+    <option value="24">France</option>
+    <option value="25">United Kingdom</option>
+    <option value="26">Ireland</option>
+    <option value="27">United States</option>
+    <option value="28">France</option>  
+    <option value="29">Turkey</option>
+    <option value="30">Ukraine</option>
+    <option value="31">Brasil</option> 
+    <option value="32">Slovenia</option>        
+        
 
-
+    
+</select>
+//how to translate text from input and display it in div translation
+<div id="translation"></div>
 <button onclick="search()">Search</button>
 <div id="display"></div>
 <script>
     function search(){
-       
-        var link = 'https://www.google.lv/search?q=HERE&gl=lv&hl=lv&gws_rd=cr&pws=0&start=10' ;
+        var country = document.getElementById('country-select').value;
+        if(country == 1){
+            var link = 'https://www.google.lv/search?q=HERE&gl=lv&hl=lv&gws_rd=cr&pws=0&start=10' ;
+        }else if(country == 2){
+            var link = 'https://www.google.lt/search?q=HERE&gl=lt&hl=lt&gws_rd=cr&pws=0&start=10' ;
+        }else if(country == 3){
+            var link = 'https://www.google.ee/search?q=HERE&gl=ee&hl=ee&gws_rd=cr&pws=0&start=10' ;
+        }else if(country == 4){
+            var link = 'https://www.google.fi/search?q=HERE&gl=fi&hl=fi&gws_rd=cr&pws=0&start=10' ;
+        }else if(country == 5){
+            var link = 'https://www.google.se/search?q=HERE&gl=se&hl=se&gws_rd=cr&pws=0&start=10' ;
+        }else if(country == 6){
+            var link = 'https://www.google.no/search?q=HERE&gl=no&hl=no&gws_rd=cr&pws=0&start=10' ;
+        }else if(country == 7){
+            var link = 'https://www.google.dk/search?q=HERE&gl=dk&hl=dk&gws_rd=cr&pws=0&start=10' ;
+        }else if(country == 8){
+            var link = 'https://www.google.de/search?q=HERE&gl=de&hl=de&gws_rd=cr&pws=0&start=10' ;
+        }else if(country == 9){
+            var link = 'https://www.google.at/search?q=HERE&gl=at&hl=at&gws_rd=cr&pws=0&start=10' ;
+        }else if(country == 10){
+            var link = 'https://www.google.ch/search?q=HERE&gl=ch&hl=ch&gws_rd=cr&pws=0&start=10' ;
+        }else if(country == 11){
+            var link = 'https://www.google.be/search?q=HERE&gl=be&hl=be&gws_rd=cr&pws=0&start=10' ;
+        }else if(country == 12){
+            var link = 'https://www.google.nl/search?q=HERE&gl=nl&hl=nl&gws_rd=cr&pws=0&start=10' ;
+        }else if(country == 13){
+            var link = 'https://www.google.ru/search?q=HERE&gl=ru&hl=ru&gws_rd=cr&pws=0&start=10' ;
+        }
+        else if(country == 14){
+            var link = 'https://www.google.pl/search?q=HERE&gl=ru&hl=ru&gws_rd=cr&pws=0&start=10' ;
+        }else if(country == 15){
+            var link = 'https://www.google.cz/search?q=HERE&gl=ru&hl=ru&gws_rd=cr&pws=0&start=10' ;
+
+        }else if(country == 16){
+            var link = 'https://www.google.si/search?q=HERE&gl=ru&hl=ru&gws_rd=cr&pws=0&start=10' ;
+        }else if(country == 17){
+            var link = 'https://www.google.hu/search?q=HERE&gl=ru&hl=ru&gws_rd=cr&pws=0&start=10' ;
+        }else if(country == 18){
+            var link = 'https://www.google.ro/search?q=HERE&gl=ru&hl=ru&gws_rd=cr&pws=0&start=10' ;
+        }else if(country == 19){
+            var link = 'https://www.google.ro/search?q=HERE&gl=ru&hl=ru&gws_rd=cr&pws=0&start=10' ;
+
+        }else if(country == 20){
+            var link = 'https://www.google.gr/search?q=HERE&gl=ru&hl=ru&gws_rd=cr&pws=0&start=10' ;
+        }else if(country == 21){
+            var link = 'https://www.google.it/search?q=HERE&gl=ru&hl=ru&gws_rd=cr&pws=0&start=10' ;
+        }else if(country == 22){
+            var link = 'https://www.google.es/search?q=HERE&gl=ru&hl=ru&gws_rd=cr&pws=0&start=10' ;
+        }else if(country == 23){
+            var link = 'https://www.google.pt/search?q=HERE&gl=ru&hl=ru&gws_rd=cr&pws=0&start=10' ;
+        }else if(country == 24){
+            var link = 'https://www.google.fr/search?q=HERE&gl=ru&hl=ru&gws_rd=cr&pws=0&start=10' ;
+        }else if(country == 25){
+            var link = 'https://www.google.en/search?q=HERE&gl=ru&hl=ru&gws_rd=cr&pws=0&start=10' ;
+        }else if(country == 26){
+            var link = 'https://www.google.ie/search?q=HERE&gl=ru&hl=ru&gws_rd=cr&pws=0&start=10' ;
+        }else if(country == 27){
+            var link = 'https://www.google.us/search?q=HERE&gl=ru&hl=ru&gws_rd=cr&pws=0&start=10' ;
+        }else if(country == 28){
+            var link = 'https://www.google.fr/search?q=HERE&gl=ru&hl=ru&gws_rd=cr&pws=0&start=10' ;
+        }else if(country == 29){
+            var link = 'https://www.google.tr/search?q=HERE&gl=ru&hl=ru&gws_rd=cr&pws=0&start=10' ;
+        }else if(country == 30){
+            var link = 'https://www.google.ua/search?q=HERE&gl=ru&hl=ru&gws_rd=cr&pws=0&start=10' ;
+        }else if(country == 31){
+            var link = 'https://www.google.br/search?q=HERE&gl=ru&hl=ru&gws_rd=cr&pws=0&start=10' ;
+        }else if(country == 32){
+            var link = 'https://www.google.si/search?q=HERE&gl=ru&hl=ru&gws_rd=cr&pws=0&start=10' ;
+        };
 
         var search = document.getElementById('search').value;
         search = search.replace(' ', '+');
