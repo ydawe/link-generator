@@ -8,54 +8,77 @@
     <title>Link Generator</title>
 </head>
 
-   
+   <div id="main" class="notranslate">
 
 <input type="text" id="search" placeholder="Type in the parameters for links">
 <select name="countries" id="country-select">
-    <option value="1">Lativa</option>
-    <option value="2">Lithuania</option>
-    <option value="3">Estonia</option>
-    <option value="4">Finland</option>
-    <option value="5">Sweden</option>
-    <option value="6">Norway</option>
-    <option value="7">Denmark</option>
-    <option value="8">Germany</option>
-    <option value="9">Austria</option>
-    <option value="10">Switzerland</option>
-    <option value="11">Belgium</option>
-    <option value="12">Netherlands</option>
-    <option value="13">Russia</option>
-    <option value="14">Poland</option>
-    <option value="15">Czech Republic</option>
-    <option value="16">Slovakia</option>
-    <option value="17">Hungary</option>
-    <option value="18">Romania</option>
-    <option value="19">Bulgaria</option>
-    <option value="20">Greece</option>
-    <option value="21">Italy</option>
-    <option value="22">Spain</option>
-    <option value="23">Portugal</option>
-    <option value="24">France</option>
-    <option value="25">United Kingdom</option>
-    <option value="26">Ireland</option>
-    <option value="27">United States</option>
-    <option value="28">France</option>  
-    <option value="29">Turkey</option>
-    <option value="30">Ukraine</option>
-    <option value="31">Brasil</option> 
-    <option value="32">Slovenia</option>        
-        
+    <option value="0">Select country</option>
 
-    
+    <option value="1">Lativa</option>
+        <option value="2">Lithuania</option>
+            <option value="3">Estonia</option>
+                <option value="4">Finland</option>
+    <option value="5">Sweden</option>
+        <option value="6">Norway</option>
+            <option value="7">Denmark</option>
+                <option value="8">Germany</option>
+    <option value="9">Austria</option>
+        <option value="10">Switzerland</option>
+            <option value="11">Belgium</option>
+                <option value="12">Netherlands</option>
+    <option value="13">Russia</option>
+        <option value="14">Poland</option>
+            <option value="15">Czech Republic</option>
+                <option value="16">Slovakia</option>
+    <option value="17">Hungary</option>
+        <option value="18">Romania</option>
+            <option value="19">Bulgaria</option>
+                <option value="20">Greece</option>
+    <option value="21">Italy</option>
+        <option value="22">Spain</option>
+            <option value="23">Portugal</option>
+                <option value="24">France</option>
+    <option value="25">United Kingdom</option>
+        <option value="26">Ireland</option>
+            <option value="27">United States</option>
+                <option value="28">France</option>  
+    <option value="29">Turkey</option>
+        <option value="30">Ukraine</option>
+            <option value="31">Brasil</option> 
+                <option value="32">Slovenia</option>        
+        
 </select>
 
 <button onclick="search()">Search</button>
+
+<input type="text" name="translate" id="translate-text" placeholder="Enter text to translate">
+
+<button onclick="translation()">Show text to translate</button>
 <div id="display"></div>
+
+</div>
+
+
+
+<div id="google_translate_element">
+<div id="display-text" ></div>
+</div>
+<script type="text/javascript" src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
 <script>
-    function search(){
-        
+function googleTranslateElementInit() {
+  new google.translate.TranslateElement({pageLanguage: 'en', includedLanguages: 'en,ru,lv,lt,et,fi,sv,no,da,de,at,ch,be,nl,pl,cz,sk,hu,ro,bg,gr,it,es,pt,fr,gb,ie,us,tr,ua,br,si'}, 'google_translate_element');
+}
+
+function translation() {
+    var text = document.getElementById("translate-text").value;
+    document.getElementById("display-text").innerHTML = text;
+    document.getElementById("display").innerHTML = "";
+
+}
+function search(){
+        document.getElementById("display-text").innerHTML = "";
         document.getElementById("display").innerHTML = "";
-        
+
         var country = document.getElementById('country-select').value;
         if(country == 1){
             var link = 'https://www.google.lv/search?q=HERE&gl=lv&hl=lv&gws_rd=cr&pws=0&start=10' ;
@@ -136,11 +159,9 @@
 
         }
     }
-</script>
- 
-
-
     
+
+
 </script>
     
 </body>
