@@ -73,11 +73,29 @@ function translation() {
     var text = document.getElementById("translate-text").value;
     document.getElementById("display-text").innerHTML = text;
     document.getElementById("display").innerHTML = "";
+    if(text == ""){
+        alert("Please enter the text to translate")
+        return;
+    }
+   
 
 }
 function search(){
         document.getElementById("display-text").innerHTML = "";
         document.getElementById("display").innerHTML = "";
+
+        if(document.getElementById('search').value == ""){
+            alert("Please enter the search parameters")
+            return;
+        }
+        if(document.getElementById('country-select').value == 0){
+            alert("Please select the country")
+            return;
+        }
+        if(document.getElementById('search').value == "" && document.getElementById('country-select').value == 0){
+            alert("Please enter the search parameters and select the country")
+            return;
+        }
 
         var country = document.getElementById('country-select').value;
         if(country == 1){
