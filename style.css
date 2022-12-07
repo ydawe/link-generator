@@ -71,3 +71,8 @@ button:hover{
 body {
     top: 0px !important; 
     }
+.skiptranslate.goog-te-gadget select{
+    display: flex;
+    flex-direction: column;
+    font-size: 30px !important;
+}
