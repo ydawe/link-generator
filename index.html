@@ -45,7 +45,8 @@
     <option value="29">Turkey</option>
         <option value="30">Ukraine</option>
             <option value="31">Brasil</option> 
-                <option value="32">Slovenia</option>        
+                <option value="32">Slovenia</option> 
+                    <option value="33">Iceland</option>
         
 </select>
 
@@ -165,7 +166,10 @@ function search(){
             var link = 'https://www.google.br/search?q=HERE&gl=ru&hl=ru&gws_rd=cr&pws=0&start=10' ;
         }else if(country == 32){
             var link = 'https://www.google.si/search?q=HERE&gl=ru&hl=ru&gws_rd=cr&pws=0&start=10' ;
+        }else if(country == 33){
+            var link = 'https://www.google.is/search?q=HERE&gl=ru&hl=ru&gws_rd=cr&pws=0&start=10' ;
         };
+
 
         var search = document.getElementById('search').value;
         search = search.replace(' ', '+');
